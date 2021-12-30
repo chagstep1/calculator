@@ -39,6 +39,7 @@ body {
 button {
 	border-radius: 8px;
 	font-weight: bold;
+	background-color: white;
 }
 
 #button-0 {
