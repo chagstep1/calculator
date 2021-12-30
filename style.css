@@ -1,8 +1,10 @@
 .calc {
-	border: 5px solid black;
-	width: 300px;
+	border: 2px solid grey;
+	width: 290px;
 	padding: 5px;
-	background-color: grey;
+	background-color: LightGrey;
+	border-radius: 15px;
+	margin: 50px;
 }
 
 body {
@@ -10,15 +12,33 @@ body {
 	justify-content: center;
 }
 
+.title {
+	margin-top: 5px;
+	padding: 5px;
+	color: black;            
+	text-decoration: underline;     
+    text-decoration-color: green;  
+	font-family: monospace;
+	font-size: 20px;
+	margin-bottom: -10px;
+}
+
 .buttons {
 	display: grid;
 	grid-template-columns: repeat(4, 70px);
-	grid-template-rows: repeat(4, 50px);  
+	grid-template-rows: repeat(5, 50px);  
 	grid-template-areas: 
-		"seven eight nine plus"
-		"four five six minus"
-		"one two three multi"
-		"zero clear equal divide";
+		"clear clear backspace backspace"
+		"seven eight nine divide"
+		"four five six multi"
+		"one two three minus"
+		"zero dot equal plus";
+	margin-bottom: -15px;
+}
+
+button {
+	border-radius: 8px;
+	font-weight: bold;
 }
 
 #button-0 {
@@ -69,6 +89,25 @@ body {
 #button-equal {
 	grid-area: equal;
 }
+#button-backspace {
+	grid-area: backspace;
+}
+#button-dot {
+	grid-area: dot;
+}
+
+#button-equal,
+#button-divide,
+#button-multi,
+#button-minus,
+#button-plus {
+	background-color: LightYellow;
+}
+
+#button-clear,
+#button-backspace {
+	background-color: MintCream;
+}
 
 #display {
 	border: 2px solid black;
@@ -76,4 +115,6 @@ body {
 	text-align: end;
 	width: 275px;
 	height: 40px;
+	margin-top: 2px;
+	border-radius: 3px;
 }
